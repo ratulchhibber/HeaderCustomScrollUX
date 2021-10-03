@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C5C5DB1326EA0AE80049D59F /* HeaderCustomScrollUXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5DB1226EA0AE80049D59F /* HeaderCustomScrollUXApp.swift */; };
-		C5C5DB1526EA0AE80049D59F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5DB1426EA0AE80049D59F /* ContentView.swift */; };
 		C5C5DB1726EA0AE90049D59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C5DB1626EA0AE90049D59F /* Assets.xcassets */; };
 		C5C5DB1A26EA0AE90049D59F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C5DB1926EA0AE90049D59F /* Preview Assets.xcassets */; };
 		C5C5DB2526EA0AE90049D59F /* HeaderCustomScrollUXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5DB2426EA0AE90049D59F /* HeaderCustomScrollUXTests.swift */; };
 		C5C5DB3026EA0AE90049D59F /* HeaderCustomScrollUXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5DB2F26EA0AE90049D59F /* HeaderCustomScrollUXUITests.swift */; };
+		C5C5DB3E26EA0B100049D59F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5DB3D26EA0B100049D59F /* ContentView.swift */; };
+		C5C5DB4226EA0CE20049D59F /* View+readSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5DB4126EA0CE20049D59F /* View+readSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 /* Begin PBXFileReference section */
 		C5C5DB0F26EA0AE80049D59F /* HeaderCustomScrollUX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeaderCustomScrollUX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C5DB1226EA0AE80049D59F /* HeaderCustomScrollUXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCustomScrollUXApp.swift; sourceTree = "<group>"; };
-		C5C5DB1426EA0AE80049D59F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5C5DB1626EA0AE90049D59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C5DB1926EA0AE90049D59F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5C5DB1B26EA0AE90049D59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		C5C5DB2B26EA0AE90049D59F /* HeaderCustomScrollUXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeaderCustomScrollUXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C5DB2F26EA0AE90049D59F /* HeaderCustomScrollUXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCustomScrollUXUITests.swift; sourceTree = "<group>"; };
 		C5C5DB3126EA0AE90049D59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C5DB3D26EA0B100049D59F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C5C5DB4126EA0CE20049D59F /* View+readSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+readSize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				C5C5DB1226EA0AE80049D59F /* HeaderCustomScrollUXApp.swift */,
-				C5C5DB1426EA0AE80049D59F /* ContentView.swift */,
+				C5C5DB3D26EA0B100049D59F /* ContentView.swift */,
+				C5C5DB4126EA0CE20049D59F /* View+readSize.swift */,
 				C5C5DB1626EA0AE90049D59F /* Assets.xcassets */,
 				C5C5DB1B26EA0AE90049D59F /* Info.plist */,
 				C5C5DB1826EA0AE90049D59F /* Preview Content */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C5DB1526EA0AE80049D59F /* ContentView.swift in Sources */,
+				C5C5DB3E26EA0B100049D59F /* ContentView.swift in Sources */,
 				C5C5DB1326EA0AE80049D59F /* HeaderCustomScrollUXApp.swift in Sources */,
+				C5C5DB4226EA0CE20049D59F /* View+readSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
