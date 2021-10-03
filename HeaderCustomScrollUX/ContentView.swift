@@ -14,7 +14,6 @@ struct ContentView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .top) {
-                Color(.systemBackground)
                 content()
                 subHeader()
                 header()
@@ -31,11 +30,11 @@ extension ContentView {
     private func header() -> some View {
         GeometryReader { proxy in
             VStack {
-                Image("elalceweb_Unsplash")
+                Image("Unsplash_Joseph Gonzalez")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .background(Color(.systemBackground))
-                    .scaleEffect(scale(for: proxy), anchor: UnitPoint(x: 0.5, y: 0.4))
+                    .scaleEffect(scale(for: proxy), anchor: UnitPoint(x: 0.5, y: 0.6))
                     .frame(width: proxy.size.width,
                            height: dynamicHeaderHeight(for: proxy))
                     .clipped()
@@ -73,14 +72,18 @@ extension ContentView {
     @ViewBuilder
     private func subHeaderView() -> some View {
         VStack {
-            Image("ashleyjurius_Unsplash")
+            Text("Grab a bite!")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .padding(.top, 20)
+            Image("Unsplash_The BlackRabbit")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 72)
+                .frame(height: 120)
                 .clipped()
             
-            Text("SubHeader")
         }
+        .background(Color.black)
         .frame(maxWidth: .infinity)
     }
 }
@@ -90,52 +93,11 @@ extension ContentView {
     
     @ViewBuilder
     private func content() -> some View {
-        VStack {
-            Group {
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-            }
-            Group {
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-                Text("Fruit")
-                    .font(.largeTitle)
-            }
-            
+        VStack(spacing: 10) {
+            ForEach((1...50), id: \.self) {
+                    Text("Sample row \($0)")
+                        .font(.body)
+                }
         }
         .background(Color.white)
         .padding(.top, HeaderHeight.max + subHeaderHeight)
@@ -160,7 +122,7 @@ extension ContentView {
         if currentPosition < HeaderHeight.min {
             return HeaderHeight.min
         } else if currentPosition > HeaderHeight.max {
-            return HeaderHeight.max + (yPosition_ * 0.5)
+            return HeaderHeight.max + yPosition_
         }
         return HeaderHeight.max + yPosition_
     }
